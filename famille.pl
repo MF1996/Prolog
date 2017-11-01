@@ -1,0 +1,17 @@
+homme(mohamed).
+homme(haouari).
+homme(mahfoud).
+homme(abdelkader).
+femme(nadjet).
+femme(khouira).
+femme(hajla).
+mere(nadjet,mahfoud).
+mere(khouira,nadjet).
+mere(hajla,haouari).
+pere(haouari,mahfoud).
+pere(mohamed,nadjet).
+pere(abdelkader,haouari).
+parent(X,Y):-pere(X,Y).
+parent(X,Y):-mere(X,Y).
+grand_parent(X,Y):-parent(X,Z),parent(Z,Y).
+grand_pere(X,Y):-homme(X),grand_parent(X,Y).
